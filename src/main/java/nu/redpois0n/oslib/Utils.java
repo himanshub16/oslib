@@ -20,6 +20,7 @@ public class Utils {
         String line;
 
         while ((line = reader.readLine()) != null) {
+            if (line.trim().length() == 0) continue;
             raw.add(line);
         }
 
@@ -34,6 +35,7 @@ public class Utils {
         List<String> lines = readFile(file);
 
         for (String line : lines) {
+            if (line.trim().length() == 0) continue;
             String[] split = line.split(delimiter);
             String key = split[0].trim();
             String value = split[1].trim();
@@ -52,6 +54,7 @@ public class Utils {
             String line;
 
             while ((line = reader.readLine()) != null) {
+                if (line.trim().length() == 0) continue;
                 list.add(line);
             }
 
